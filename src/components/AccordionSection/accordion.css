@@ -1,0 +1,19 @@
+.question-and-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.3rem;
+  cursor: pointer;
+}
+
+.question {
+  color: #1e1f36;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.answer {
+  color: #4b4c5f;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
