@@ -18,18 +18,20 @@ const AccordionSection = (props) => {
         return clickHendler(props.id);
       }}
     >
-      <div className="question-and-image">
-        <p className="question">{props.title}</p>
+      <div className="card-accordeon">
+        <div className="question-and-image">
+          <p className="question">{props.title}</p>
 
+          {props.choosenSection === props.id ? (
+            <img className="down-arrow" src={upArrow} alt="down arrow" />
+          ) : (
+            <img className="up-arrow" src={downArrow} alt="up arrow" />
+          )}
+        </div>
         {props.choosenSection === props.id ? (
-          <img className="down-arrow" src={upArrow} alt="down arrow" />
-        ) : (
-          <img className="up-arrow" src={downArrow} alt="up arrow" />
-        )}
+          <p className="answer">{props.subText}</p>
+        ) : null}
       </div>
-      {props.choosenSection === props.id ? (
-        <p className="answer">{props.subText}</p>
-      ) : null}
     </div>
   );
 };
